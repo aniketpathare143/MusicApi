@@ -50,7 +50,7 @@ namespace MusicApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MusicApi v1"));
             }
 
-            dbContext.Database.EnsureCreated(); //Use only if we dnt want to change model class, it will create db if not exists.
+            //dbContext.Database.EnsureCreated(); //Use only if we dnt want to change model class, it will create db if not exists.
             app.UseHttpsRedirection();
 
             app.UseRouting();
