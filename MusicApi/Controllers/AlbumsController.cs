@@ -34,8 +34,10 @@ namespace MusicApi.Controllers
 
         //api/albums
         [HttpGet]
-        public async Task<IActionResult> GetAlbums()
+        public async Task<IActionResult> GetAlbums(int? pageNumber, int? pageSize)
         {
+            int currentPageNumber = pageNumber ?? 1;
+            int currentPageSize = pageSize ?? 5;
             //To get albums with all fields
             //var albums = _dbContext.Albums;
 
@@ -47,7 +49,7 @@ namespace MusicApi.Controllers
                                      Name = album.Name,
                                      ImageUrl = album.ImageUrl
                                  }).ToListAsync();
-            return Ok(albums);
+            return Ok(albums.Skip((currentPageNumber-1)* currentPageSize).Take(currentPageSize)); //Paging Logic            
         }
 
         //https://localhost:44373/api/albums/albumdetails?albumid=1

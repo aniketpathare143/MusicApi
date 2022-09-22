@@ -35,8 +35,10 @@ namespace MusicApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAllSongs()
+        public async Task<ActionResult> GetAllSongs(int? pageNumber,int? pageSize)
         {
+            int currentPageNumber = pageNumber ?? 1;
+            int currentPageSize = pageSize ?? 5;
             var songs = await (from song in _dbContext.Songs
                                select new
                                {
@@ -46,7 +48,7 @@ namespace MusicApi.Controllers
                                    ImageUrl = song.ImageUrl,
                                    AudioUrl = song.AudioUrl
                                }).ToListAsync();
-            return Ok(songs);
+            return Ok(songs.Skip((currentPageNumber - 1)* currentPageSize).Take(currentPageSize)); //Paging Logic
         }
 
         //https://localhost:44373/api/songs/FeaturedSongs
