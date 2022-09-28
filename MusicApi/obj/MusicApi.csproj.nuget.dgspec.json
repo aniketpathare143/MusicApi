@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Aniket\\Code\\MusicApi\\MusicApi\\MusicApi.csproj": {}
+    "C:\\Aniket\\Code\\.Net 6 Projects\\MusicApi\\MusicApi\\MusicApi.csproj": {}
   },
   "projects": {
-    "C:\\Aniket\\Code\\MusicApi\\MusicApi\\MusicApi.csproj": {
+    "C:\\Aniket\\Code\\.Net 6 Projects\\MusicApi\\MusicApi\\MusicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Aniket\\Code\\MusicApi\\MusicApi\\MusicApi.csproj",
+        "projectUniqueName": "C:\\Aniket\\Code\\.Net 6 Projects\\MusicApi\\MusicApi\\MusicApi.csproj",
         "projectName": "MusicApi",
-        "projectPath": "C:\\Aniket\\Code\\MusicApi\\MusicApi\\MusicApi.csproj",
+        "projectPath": "C:\\Aniket\\Code\\.Net 6 Projects\\MusicApi\\MusicApi\\MusicApi.csproj",
         "packagesPath": "C:\\Users\\patharea\\.nuget\\packages\\",
-        "outputPath": "C:\\Aniket\\Code\\MusicApi\\MusicApi\\obj\\",
+        "outputPath": "C:\\Aniket\\Code\\.Net 6 Projects\\MusicApi\\MusicApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -23,15 +23,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -42,20 +42,30 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -64,7 +74,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -76,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
