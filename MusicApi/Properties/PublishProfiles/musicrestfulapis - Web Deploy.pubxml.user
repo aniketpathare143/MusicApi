@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAW9XIRrxMkE2zu7jvjr5SsAAAAAACAAAAAAADZgAAwAAAABAAAABe+504d7esNCvaU4ADrvO5AAAAAASAAACgAAAAEAAAAPE6+Gix76fPeoGcemP2EY+AAAAAcSDUV7Diko85hgQS5og6kDIrqhBTjfriQTAU8R1yfnm/zVv7qDl/GWX4A1mxBGGqm1ga6D7MK4TaGAzSLf0pAwELn8fAmp6Bhg8VlPhq6mpaHoZXSfmRiayiWNjF2dTV8GYQW9/20cwsmQG5djPpneMupn1cHN95RpukZ/Xf4gAUAAAAazXlvuBbLiYWaMPShgXtaU4BiaY=</EncryptedPassword>
+    <History>True|2022-09-29T13:03:18.0461137Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="MusicApi.Data.ApiDbContext">
+      <Value>Server=tcp:musicapisserver.database.windows.net,1433%3bInitial Catalog=musicdb%3bPersist Security Info=False%3bUser ID=aniket%3bPassword=Rotary%401%2a%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

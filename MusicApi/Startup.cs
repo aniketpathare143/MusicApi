@@ -36,7 +36,7 @@ namespace MusicApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MusicApi", Version = "v1" });
             });
             //This stmtnt will goto Apidbcontext and then to base class dbcontext and will create connection.
-            services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(@"Server=L10ASO-R90Y88XJ;Initial Catalog=Musicdb;Persist Security Info=True;Connection Timeout=30;Integrated Security=True;MultipleActiveResultSets=True;"));
+            services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnectionAzure")));
 
         }
 
