@@ -32,7 +32,7 @@ namespace MusicApi
 
             services.AddControllers();
             services.AddMvc().AddXmlSerializerFormatters();//for XML Responses
-            services.AddApiVersioning(o=>o.ApiVersionReader=new MediaTypeApiVersionReader());
+            //services.AddApiVersioning();
             services.AddSwaggerGen(c =>
             {
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());

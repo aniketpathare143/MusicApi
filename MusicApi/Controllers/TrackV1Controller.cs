@@ -6,8 +6,8 @@ using System.Collections.Generic;
 
 namespace MusicApi.Controllers
 {
-    [ApiVersion("1.0")]
-    [Route("api/tracks")] 
+   // [ApiVersion("1.0")]
+    [Route("api/tracksv1")] 
     [ApiController]
     public class TrackV1Controller : ControllerBase
     {
