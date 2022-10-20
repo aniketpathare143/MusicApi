@@ -34,6 +34,7 @@ namespace MusicApi
             services.AddApiVersioning();
             services.AddSwaggerGen(c =>
             {
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MusicApi", Version = "v1" });
             });
             //This stmtnt will goto Apidbcontext and then to base class dbcontext and will create connection.
