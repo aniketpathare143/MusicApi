@@ -36,7 +36,7 @@ namespace MusicApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MusicApi", Version = "v1" });
             });
             //This stmtnt will goto Apidbcontext and then to base class dbcontext and will create connection.
-            services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnectionAzure")));
+            services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnectionLocal")));
 
         }
 
@@ -56,6 +56,12 @@ namespace MusicApi
             app.UseRouting();
 
             app.UseAuthorization();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Songs}/{action=GetAllSongs}/{id?}");
+            //});
 
             app.UseEndpoints(endpoints =>
             {

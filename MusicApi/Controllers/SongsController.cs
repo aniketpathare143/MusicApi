@@ -101,5 +101,24 @@ namespace MusicApi.Controllers
                                }).Take(3).ToListAsync();
             return Ok(songs);
         }
+
+        [HttpGet("[action]")]
+        public IEnumerable<Song> GetSongsInOrder(string sortParam)
+        {
+            IQueryable<Song> songs;
+            switch (sortParam)
+            {
+                case "asc":
+                    songs=_dbContext.Songs.OrderBy(s => s.Title);
+                    break;
+                case "desc":
+                    songs =_dbContext.Songs.OrderByDescending(s => s.Title);
+                    break;
+                default:
+                    songs =_dbContext.Songs;
+                    break;
+            }
+            return songs;
+        }
     }
 }
