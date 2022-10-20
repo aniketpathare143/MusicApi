@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace MusicApi.Controllers
 {
     [ApiVersion("2.0")]
-    [Route("api/v{version:apiVersion}/tracks")] //https://localhost:44373/api/v2/tracks
+    [Route("api/tracks")] 
     [ApiController]
     public class TrackV2Controller : ControllerBase
     {
